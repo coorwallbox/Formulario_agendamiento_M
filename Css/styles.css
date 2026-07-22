@@ -50,7 +50,7 @@ body[data-brand="Volvo"] {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/volvo.jpg");
 }
 body[data-brand="MG"] {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/Mg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/MG.jpg");
 }
 body[data-brand="Mazda"] {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/Mazda.jpg");
