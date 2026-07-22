@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Clientes</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-brand="Hyundai">
+  <!-- Contenedor principal de la aplicacion -->
+  <main class="app">
+    <!-- Barra de pestañas por marca -->
+    <nav class="tabs" id="tabs">
+      <button type="button" class="tab active" data-brand="Hyundai">Hyundai</button>
+      <button type="button" class="tab" data-brand="Volvo">Volvo</button>
+      <button type="button" class="tab" data-brand="MG">MG</button>
+      <button type="button" class="tab" data-brand="Mazda">Mazda</button>
+      <button type="button" class="tab" data-brand="Cupra">Cupra</button>
+    </nav>
+
+    <!-- Card centrada con efecto glassmorphism (se estiliza en Fase 2) -->
+    <section class="card">
+      <h1 class="card__title">Registro de Cliente</h1>
+
+      <!-- Formulario unico: los campos no cambian entre tabs -->
+      <form id="registration-form" novalidate>
+        <!-- Campo oculto: guarda la marca activa para saber la hoja destino -->
+        <input type="hidden" id="brand" name="brand" value="Hyundai" />
+
+        <!-- Cada .field usa el patron de label flotante:
+             input primero, label despues (el label se anima en Fase 2) -->
+        <div class="field">
+          <input type="text" id="clientName" name="clientName" placeholder=" " required />
+          <label for="clientName">Nombre del cliente</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="idNumber" name="idNumber" placeholder=" " required />
+          <label for="idNumber">Cédula</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="phone" name="phone" placeholder=" " required />
+          <label for="phone">Celular</label>
+        </div>
+
+        <div class="field">
+          <!-- Las opciones se cargan dinamicamente segun la marca (Fase 3) -->
+          <select id="vehicleReference" name="vehicleReference" required>
+            <option value="" disabled selected hidden></option>
+          </select>
+          <label for="vehicleReference">Referencia de vehículo</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="address" name="address" placeholder=" " required />
+          <label for="address">Dirección</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="city" name="city" placeholder=" " required />
+          <label for="city">Ciudad</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="advisorName" name="advisorName" placeholder=" " required />
+          <label for="advisorName">Nombre del asesor</label>
+        </div>
+
+        <div class="field">
+          <textarea id="observations" name="observations" placeholder=" " rows="4"></textarea>
+          <label for="observations">Observaciones</label>
+        </div>
+
+        <button type="submit" class="btn-submit">Registrar</button>
+
+        <!-- Mensaje de estado tras el envio (exito / error) -->
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- utils.js primero: main.js depende de sus funciones -->
+  <script src="js/utils.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
