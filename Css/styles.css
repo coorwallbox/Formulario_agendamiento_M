@@ -104,8 +104,8 @@ body[data-brand="Cupra"] {
 /* Tab activa: mas opaca y con texto pleno */
 .tab.active {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.28);
-  border-color: rgba(122, 255, 191, 0.5);
+  background: rgba(49, 233, 254, 0.28);
+  border-color: rgba(79, 155, 255, 0.5);
 }
 
 /* ==========================================================================
